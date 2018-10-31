@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.toanvu.duan1.LoginAcivity;
 import com.example.toanvu.duan1.R;
 
 public class ManHinhCho extends AppCompatActivity {
@@ -33,5 +32,6 @@ public class ManHinhCho extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
+        finish();
     }
 }
