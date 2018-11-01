@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +18,7 @@ import android.support.v7.widget.Toolbar;
 
 
 import com.example.toanvu.duan1.R;
-import com.example.toanvu.duan1.fragment.fragment_activity;
+import com.example.toanvu.duan1.fragment.IntroFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
@@ -40,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = findViewById(R.id.navigationView);
         navigationView.setNavigationItemSelectedListener(this);
-        QuanLyFragment(new fragment_activity());
+        QuanLyFragment(new IntroFragment());
 
 
     }
@@ -85,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.gioiThieu:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLayout, new fragment_activity()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLayout, new IntroFragment()).commit();
                 Toast.makeText(this, "Giới thiệu", Toast.LENGTH_SHORT).show();
                 break;
 

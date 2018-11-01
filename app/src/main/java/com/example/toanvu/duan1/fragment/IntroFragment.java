@@ -16,9 +16,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class fragment_activity extends Fragment {
+public class IntroFragment extends Fragment {
     private ViewFlipper viewFlipper;
-
 
 
     @Nullable
@@ -35,7 +34,6 @@ public class fragment_activity extends Fragment {
         viewFlipper = view.findViewById(R.id.viewFlipper);
         ActionViewFlipper();
 
-
     }
 
     private void ActionViewFlipper() {
@@ -43,17 +41,18 @@ public class fragment_activity extends Fragment {
         mangquangcao.add(R.drawable.viewflipper1);
         mangquangcao.add(R.drawable.viewflipper3);
         mangquangcao.add(R.drawable.viewflipper4);
-        for (int i=0; i < mangquangcao.size();i++){
+        for (int i = 0; i < mangquangcao.size(); i++) {
             ImageView imageView = new ImageView(getContext());
             Picasso.with(getContext()).load(mangquangcao.get(i)).into(imageView);
-            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             viewFlipper.addView(imageView);
         }
         viewFlipper.setFlipInterval(4000);
         viewFlipper.setAutoStart(true);
 
-        Animation animation_silde_in = AnimationUtils.loadAnimation(getContext(),R.anim.slide_in_right);
-        Animation animation_slide_out = AnimationUtils.loadAnimation(getContext(),R.anim.slide_out_right);
+
+        Animation animation_silde_in = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in_right);
+        Animation animation_slide_out = AnimationUtils.loadAnimation(getContext(), R.anim.slide_out_right);
         viewFlipper.setInAnimation(animation_silde_in);
         viewFlipper.setOutAnimation(animation_slide_out);
 
