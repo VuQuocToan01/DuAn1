@@ -4,48 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#d1cfcf"
-    tools:context=".Activity.MainActivity">
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#411474">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Barcelona"
+                android:textColor="#fff"
+                android:textSize="24dp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
 
     <android.support.v4.widget.DrawerLayout
+        android:id="@+id/draweLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <include layout="@layout/fragment" />
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="#4b2aa1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:textSize="30dp"
-                        android:textColor="#fff"
-                        android:gravity="center"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Barcelona" />
-
-            </RelativeLayout>
-            </android.support.v7.widget.Toolbar>
-
-            <android.support.design.widget.NavigationView
-                android:layout_width="wrap_content"
-                android:id="@+id/navigationView"
-                app:menu="@menu/menu_navetionview"
-                android:layout_gravity="start"
-                app:headerLayout="@layout/heard_navigationvew"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
-
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/heard_navigationvew"
+            app:menu="@menu/menu_navetionview" />
     </android.support.v4.widget.DrawerLayout>
 </LinearLayout>

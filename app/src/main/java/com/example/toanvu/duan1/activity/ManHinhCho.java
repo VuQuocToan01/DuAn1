@@ -1,4 +1,4 @@
-package com.example.toanvu.duan1.Activity;
+package com.example.toanvu.duan1.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
