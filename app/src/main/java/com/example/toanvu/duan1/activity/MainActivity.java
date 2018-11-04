@@ -5,9 +5,9 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.ListFragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,11 +18,14 @@ import android.support.v7.widget.Toolbar;
 
 
 import com.example.toanvu.duan1.R;
+import com.example.toanvu.duan1.fragment.CauThuFragment;
+import com.example.toanvu.duan1.fragment.DoiHinhFragment;
 import com.example.toanvu.duan1.fragment.IntroFragment;
+import com.example.toanvu.duan1.fragment.DanhSachFragment;
+import com.example.toanvu.duan1.fragment.QuanLyFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
-        private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
     private NavigationView navigationView;
 
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = findViewById(R.id.navigationView);
         navigationView.setNavigationItemSelectedListener(this);
-        QuanLyFragment(new IntroFragment());
+        QuanLyFragment(new DanhSachFragment());
 
 
     }
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_toolbar,menu);
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -71,15 +74,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.danhCTNB:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLayout, new DanhSachFragment()).commit();
+                Toast.makeText(this, "Danh sách ban quản lý ", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.danhSBQL:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLayout, new QuanLyFragment()).commit();
                 Toast.makeText(this, "Danh sách ban quản lý ", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.danhsachCT:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLayout, new CauThuFragment()).commit();
                 Toast.makeText(this, "Danh sách cầu thủ", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.doihinh:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentLayout, new DoiHinhFragment()).commit();
                 Toast.makeText(this, "Danh sách cầu thủ", Toast.LENGTH_SHORT).show();
                 break;
 
@@ -101,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void QuanLyFragment(Fragment fragment) {
-        if (fragment != null){
+        if (fragment != null) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragmentLayout, fragment);
             fragmentTransaction.commit();

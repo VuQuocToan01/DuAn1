@@ -16,9 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.LoginAcivity"/>
+        <activity android:name=".activity.LoginAcivity" />
         <activity android:name=".activity.MainActivity" />
-
+        <activity android:name=".fragment.DanhSachFragment" />
+        <activity android:name=".add.ThemDanhSach" />
+        <activity android:name=".add.ThemQuanLy" />
+        <activity android:name=".add.ThemCauThu" />
+        <activity android:name=".add.ThemDoiHinhChinh" />
+        <activity android:name=".ThemDoiHinhPhu"></activity>
     </application>
 
 </manifest>

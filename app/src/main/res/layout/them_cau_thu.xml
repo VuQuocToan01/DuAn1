@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/themcauthu"
+    tools:context=".add.ThemCauThu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#45000000"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#50ffffff"
+                android:hint="Mã cầu thủ:..."
+                android:textColor="#dfdfdf"
+                android:textColorHint="#dfdfdf" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="#50ffffff"
+                android:hint="Tên cầu thủ:..."
+                android:textColor="#dfdfdf"
+                android:textColorHint="#dfdfdf" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="#50ffffff"
+                android:hint="Chỉ số cầu thủ:..."
+                android:textColor="#dfdfdf"
+                android:textColorHint="#dfdfdf" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="#50ffffff"
+                android:hint="Quốc tịch:..."
+                android:textColor="#dfdfdf"
+                android:textColorHint="#dfdfdf" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="#50ffffff"
+                android:hint="Gía cầu thủ:..."
+                android:textColor="#dfdfdf"
+                android:textColorHint="#dfdfdf" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="#50ffffff"
+                android:text="Chọn ảnh"
+                android:textAllCaps="false"
+                android:textColor="#ef0b0b"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#50ffffff"
+                android:text="Thêm"
+                android:textAllCaps="false"
+                android:textColor="#37196e" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:background="#50ffffff"
+                android:text="Huỷ"
+                android:textAllCaps="false"
+                android:textColor="#37196e" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="#50ffffff"
+                android:text="Show"
+                android:textAllCaps="false"
+                android:textColor="#37196e" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
